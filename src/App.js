@@ -1,26 +1,35 @@
-import { useState } from "react";
-function App() {
-  const initialValue = true;
-  const [text, setText] = useState(initialValue);
+// import UseState from './component/UseState';
+// import UseStateExample from './component/UseStateExample';
+// import UseEffect from './component/UseEffect';
+// import UseEffectExample from "./component/UseEffectExample";
+import Login from "./component/useContextHook/Login.tsx";
+import SignUp from "./component/useContextHook/SignUp.tsx";
+import UseContext from "./component/useContextHook/UseContext.tsx";
 
-  console.log(text);
-  const handleClick = () => {
-    setText(!text);
-  };
+import React from "react";
 
+const App = () => {
   return (
-    <>
-      <div>
-        <h1>useState Hook</h1>
-        <div>
-          <p>Hello world</p>
-          <button type="button" onClick={handleClick}>
-            ToggleText
-          </button>
-        </div>
+    <div>
+      {/* <UseState /> */}
+      {/* <UseStateExample /> */}
+      {/* <UseEffect /> */}
+      {/* <UseEffectExample /> */}
+
+      <UseContext />
+
+      <div
+        style={{
+          display: "flex",
+          gap: 100,
+          justifyContent: "center",
+        }}
+      >
+        <Login />
+        <SignUp />
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default App;
